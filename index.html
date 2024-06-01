@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bg-light p-4 d-flex">
+                <div class="d-flex me-auto">
+                    <i class="fa-brands fa-instagram fs-1"></i>
+                    <p class="fs-4 ps-2">Instagram</p>
+                </div>
+                <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Create new post
+                </button>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Caption:</label>
+                                        <textarea class="form-control text-body-tertiary"
+                                            id="message-text">Add the caption of your post here</textarea>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i
+                                            class="fa-solid fa-camera border border-light-subtle bg-body-tertiary p-2"></i>
+                                        <i
+                                            class="fa-solid fa-location-dot border border-light-subtle bg-body-tertiary p-2 ms-2"></i>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown ps-2">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <nav>
+                <div class="nav justify-content-center" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                  </button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                  </button>
+                </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row justify-content-center p-1">
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179106/bulldog-1047518_1920_wep2aq.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179105/lion-4581841_1920_js9cyt.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179105/laptop-1478822_1920_pgha0r.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179105/drink-84533_1920_qbz6ka.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/sunset-2983614_1920_uobj7i.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/jetty-4155214_1920_gxysh5.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179103/china-7094961_1920_ckpc6d.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/forest-6631518_1920_ebe2fl.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-4 mb-3">
+                                <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/dolphin-203875_1920_irq0ce.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">My crazy dog</div>
+                                <div class="ms-auto p-2">03/24</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179106/bulldog-1047518_1920_wep2aq.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 603 likes</p>                           
+                                <p class="card-text fs-5 text">A dog is a loyal and loving companion that brings joy to our lives. Their playful nature and unconditional love make them cherished members of our families. From early morning walks to cozy cuddles on the couch, dogs enrich our lives in countless ways.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">Lions</div>
+                                <div class="ms-auto p-2">10/23</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179105/lion-4581841_1920_js9cyt.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 869 likes</p>                           
+                                <p class="card-text fs-5 text">The majestic lion, the king of the jungle, reigns supreme with its powerful roar and regal mane. These apex predators command respect with their strength, agility, and fierce hunting prowess. Social creatures, lions live in prides, where they cooperate to hunt and protect their cubs. Their presence shapes the African savanna, maintaining the delicate balance of the ecosystem.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">My desk</div>
+                                <div class="ms-auto p-2">12/23</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179105/laptop-1478822_1920_pgha0r.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 369 likes</p>                           
+                                <p class="card-text fs-5 text">My desk is a cluttered haven of tools for my creative endeavors. Pens, pencils, and highlighters stand ready to capture my thoughts, while my laptop and tablet provide the digital platforms for my expression. Notebooks, sketchbooks, and sticky notes offer endless spaces to explore ideas, and a trusty mug keeps me fueled throughout the day. Amidst this organized chaos, I find inspiration and bring my ideas to life.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">The beach</div>
+                                <div class="ms-auto p-2">01/24</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179105/drink-84533_1920_qbz6ka.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 569 likes</p>                           
+                                <p class="card-text fs-5 text">The beach beckons with its soft sand, gentle waves, and endless horizon. A place of relaxation and rejuvenation, it offers a haven from the hustle and bustle of daily life. The sun-kissed skin, the salty breeze, and the soothing rhythm of the waves create an atmosphere of tranquility and serenity. Whether seeking adventure or simply basking in nature's beauty, the beach provides an escape to a world of endless possibilities.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">My canoe</div>
+                                <div class="ms-auto p-2">07/22</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/sunset-2983614_1920_uobj7i.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 1105 likes</p>                           
+                                <p class="card-text fs-5 text">My canoe is my favorite way to explore the outdoors. I love paddling on lakes, rivers, and streams. It's a great way to get exercise and enjoy nature.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">Sunset</div>
+                                <div class="ms-auto p-2">09/23</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/jetty-4155214_1920_gxysh5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 1258 likes</p>                           
+                                <p class="card-text fs-5 text">As the sun dips below the horizon, painting the sky with hues of orange, pink, and purple, a sense of tranquility descends upon the land. The day's hustle and bustle fade into a hushed whisper, replaced by the gentle symphony of nature's lullaby. The air grows cooler, carrying the sweet scent of blooming night flowers. Stars begin to twinkle like diamonds scattered across a velvety cloth, heralding the arrival of another night.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">Dolphins</div>
+                                <div class="ms-auto p-2">03/23</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/dolphin-203875_1920_irq0ce.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 1622 likes</p>                           
+                                <p class="card-text fs-5 text">Dolphins are intelligent, playful marine mammals known for their acrobatic leaps and social nature. These sleek creatures communicate through whistles and clicks, forming strong bonds with their pod members. Dolphins navigate the ocean with grace and speed, using echolocation to hunt and explore their underwater world. Their playful antics and curious nature have captivated humans for centuries, making them a symbol of intelligence and joy.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">Autumn</div>
+                                <div class="ms-auto p-2">01/24</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179104/forest-6631518_1920_ebe2fl.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 753 likes</p>                           
+                                <p class="card-text fs-5 text">Autumn, a season of vibrant hues, crisp air, and cozy moments.</p>
+                            </div>    
+                        </div>
+                        <div class="card mb-4 mx-auto" style="width: 40rem;">
+                            <div class="card-header d-flex">
+                                <div class="p-2 fs-2 text">City of night</div>
+                                <div class="ms-auto p-2">02/24</div>
+                            </div>
+                            <img src="https://res.cloudinary.com/dyvut6idr/image/upload/v1717179103/china-7094961_1920_ckpc6d.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="likes fw-bold fs-3 text"> 425 likes</p>                           
+                                <p class="card-text fs-5 text">The city is a vibrant hub of activity, with towering skyscrapers, bustling streets, and a diverse population.</p>
+                            </div>    
+                        </div>
+                    </div>  
+                </div>                  
+        </div>
+
+    </div>
+
+</body>
+
+</html>
